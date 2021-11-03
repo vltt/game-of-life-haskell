@@ -1,9 +1,6 @@
 # game-of-life
 
-## Сборка и запуск
-
-
-Собрать и запустить проект можно при помощи команды:
+## Build and Run
 
 ```
 cabal game-of-life.cabal
