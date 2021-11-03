@@ -1,0 +1,32 @@
+cabal-version: >=1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7d6803925a751e88191a93372c345e32564eb3418702ff39dba1a4ee79926a7a
+
+name:           game-of-life
+version:        0.0.0.0
+description:    Please see the README file.
+author:         Violetta Fedotova
+copyright:      2019 Violetta Fedotova
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  ghc-options:         -Wall
+  exposed-modules:     Config, Game, Graphic, Input, Types
+  hs-source-dirs:      src
+  build-depends:       base >= 4.7
+                     , gloss >= 1.8.0
+
+executable game-of-life
+  main-is: Main.hs
+  other-modules:      Config Game Graphic Input Types
+  hs-source-dirs:     src
+  ghc-options:        -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:      base >=4.7 && <5
+                      , gloss >= 1.8.0
+  default-language: Haskell2010
